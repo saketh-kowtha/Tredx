@@ -1,0 +1,19 @@
+.home{
+    background-image: url('../assests/homebg.jpg');
+    background-repeat: repeat;
+    min-height: 95vh;
+}
+header{
+    background-image: url('../assests/homebg.jpg');
+}
+body{
+    overflow-x: hidden;
+}
+footer{
+    padding: 50px;
+    background-color: rgb(85,85,85);
+    color: rgb(255,255,255)
+}
+.input-data{
+    width: 65%;
+}
