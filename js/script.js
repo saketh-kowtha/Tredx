@@ -1,29 +1,19 @@
-let home = document.getElementById('explore')
-home.addEventListener('click',function(){
-    toastr.warning('My name is Inigo Montoya. You killed my father, prepare to die!')
-
-    // scroll_to_div('main')
-
-})
-
 function scroll_to_div(div_id)
 {
- $('html,body').animate(
- {
-  scrollTop: $("#"+div_id).offset().top
- },
- 'slow');
+    $('html,body').animate(
+    {
+    scrollTop: $("#"+div_id).offset().top
+    },
+    'slow');
 }
 
-let send = document.getElementById('send')
-send.addEventListener('click',function(){
-    let user = document.getElementById('name')
-    let email = document.getElementById('email')
-    let cnt = document.getElementById('cnt')
-
-})
 
 function getContent(){
+    let send = document.getElementById('send')
+    send.addEventListener('click',function(){
+        console.log("Wrked")
+        query()
+    })
     let xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -35,10 +25,7 @@ function getContent(){
     xhttp.send();
 }
  
-let send = document.getElementById('send')
-send.addEventListener('click',function(){
-    query()
-})
+
 function query(){
     let xhttp = new XMLHttpRequest()
     xhttp.onreadystatechange = function() {
