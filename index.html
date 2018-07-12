@@ -14,20 +14,35 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Toast CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+      <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <!-- Toast JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 </head>
 
-<body>
+<body onload="getContent()">
     <header>
-            <nav class="navbar transparent navbar-inverse navbar-fixed">
-                    <div class="container-fluid">
-                      <div class="navbar-header">
-                        <a class="navbar-brand text-dark text-uppercase font-weight-bold font-size-18" href="#">TREDX</a>
-                      </div>
-                      <div class="navbar-item align-right">
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">About Me</button>
-                      </div>
-                    </div>
-             </nav>
+        <nav class="navbar transparent navbar-inverse navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                <a class="navbar-brand text-dark text-uppercase font-weight-bold font-size-18" href="#">TREDX</a>
+                </div>
+                <div class="navbar-item align-right">
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">About Me</button>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section  class="container-fluid home text-center">
@@ -37,6 +52,16 @@
                 </div>
                 <div class="col-lg-12">
                     <a href="javascript:scroll_to_div('main')"  class="btn btn-primary" style="margin-top: -110px;">Explore!</a>
+                </div>
+            </div>
+        </section>
+        <section id="">
+            <div class="row container-fluid">
+                <div class="col-lg-12 text-center display-3">
+                    Portfolio
+                </div>
+                <div id = "main" class="col-lg-12 text-center">
+
                 </div>
             </div>
         </section>
@@ -56,24 +81,24 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Good Name" id="usr" name="name">
+                            <input type="text" class="form-control" placeholder="Good Name" id="name" name="name">
                         </div>
 
                         <div class="input-group mb-3 input-data p-2 my-flex-item">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-envelope"></i></span>
                             </div>
-                            <input type="email" class="form-control" placeholder="Email" id="usr" name="email">
+                            <input type="email" class="form-control" placeholder="Email" id="email" name="email">
                         </div>
 
                         <div class="input-group mb-3 input-data p-2 my-flex-item">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-pencil"></i></span>
                             </div>
-                            <textarea class="form-control" placeholder="Your message"></textarea>
+                            <textarea class="form-control" placeholder="Your message" id="cnt"></textarea>
                         </div>
 
-                        <button class="btn btn-info">Send <i class="fa fa-paper-plane"></i></button>
+                        <button id = "send" class="btn btn-info">Send <i class="fa fa-paper-plane"></i></button>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -111,6 +136,7 @@
                         <img src="assests/bg.png" class="rounded-circle" alt="Cinque Terre" width="50%" height="50%"><br>
                         <label>Dharma Teja</label><br>
                         Some Text here....
+
                 </div>
                 
                 <!-- Modal footer -->
@@ -119,16 +145,8 @@
               </div>
             </div>
           </div>
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+      <!-- MDB core JavaScript -->
+      <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 
 </html>
