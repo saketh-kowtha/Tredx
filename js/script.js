@@ -35,5 +35,5 @@ function query(){
         }
     };
     xhttp.open("POST", "query.php", true);
-    xhttp.send("name="+document.getElementById('name')+"&email="+document.getElementById('email')+"&cnt="+document.getElementById('cnt'));
+    xhttp.send("name="+document.getElementById('name').value+"&email="+document.getElementById('email').value+"&cnt="+document.getElementById('cnt').value);
 }
