@@ -35,5 +35,8 @@ function query(){
         }
     };
     xhttp.open("POST", "query.php", true);
-    xhttp.send("name="+document.getElementById('name').value+"&email="+document.getElementById('email').value+"&cnt="+document.getElementById('cnt').value);
+    xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    let pst = "name="+document.getElementById('name').value+"&email="+document.getElementById('email').value+"&cnt="+document.getElementById('cnt').value
+    console.log(pst)
+    xhttp.send(pst);
 }
